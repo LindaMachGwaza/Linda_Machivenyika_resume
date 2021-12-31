@@ -1,0 +1,358 @@
+/*Page layout and font family*/
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+
+}
+
+/*Page background color*/
+body {
+    background-color: white;
+}
+
+/*Header section customised*/
+.print-area {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.print-area .header {
+    width: 120%;
+    height: 150px;
+    background-color: rgb(206, 174, 161);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Image customised and displayed as rounded, filters when mouse moves over and color transitions into original color from the gray filter*/
+.header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 10px gray;
+    cursor: pointer;
+    transition: 5s;
+    user-select: none;
+    filter: grayscale(100%);
+
+}
+
+.header img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    box-shadow: 3px 3px 20px gray;
+
+}
+
+/*Header text size and color customised*/
+.header-text {
+    width: 60%;
+    margin-left: auto;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    font-weight: normal;
+    color: whitesmoke;
+    padding-right: 50px;
+
+}
+
+.header-text p {
+    font-size: 20px;
+    color: rgb(90, 90, 97);
+}
+
+/*Content section to display as flex; they automatically arrange depending on screen size*/
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Left section given specific width and background color*/
+.left-area {
+    width: 30%;
+    background-color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*Contact section layout modified*/
+.left-area .contact {
+    margin-top: 200px;
+    padding: 0 30px;
+}
+
+.contact h4 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 20px 0;
+    color: rgb(33, 33, 61);
+    
+
+}
+
+.contact h5 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: rgb(33, 33, 61);
+}
+
+.contact p {
+    font-size: 17px;
+}
+
+.skills {
+    margin-top: 100px;
+    color: rgb(33, 33, 61);
+}
+
+.skills h1 {
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(33, 33, 61);
+}
+
+/*Bars section/Skills made to display next to each other as columns*/
+.bars {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 10px;
+    padding: 0 20px;
+}
+
+.bars .bar p {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(33, 33, 61);
+}
+
+/*Bars display customised and defined, given a color for visibility*/
+.bar span {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: lightgray;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/*Bars customised so that they can show scale or level of skills*/
+.bar span::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 80%;
+    background-color: rgb(33, 33, 61);
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.other span {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: lightgray;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/*Bars customised so that they can show scale or level of skills*/
+.other span::before {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: rgb(33, 33, 61);
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+/*Other skills bars*/
+.other {
+    padding: 0 20px;
+}
+
+.skills h4 {
+    margin-top: 100px;
+    font-size: 25px;
+    font-weight: 545;
+    color: rgb(33, 33, 61);
+}
+.follow{
+    padding-top: 100px;
+}
+/*Social media information, font size cutomised and given a color*/
+.follow p {
+    font-size: 15px;
+    margin: 10px 0;
+    color: rgb(51, 51, 95);
+    
+}
+/*Page section where work details, experience and about me information will be entered*/
+.right-area {
+    width: 70%;
+    padding: 50px;
+}
+
+.right-area h1 {
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(33, 33, 61);
+    margin-top: 20px;
+}
+/*The about text paragraph customized and moved to the left for a better page layout*/
+.right-area p {
+    color: rgb(33, 33, 61);
+    padding-left: 70px;
+    text-align: justify;
+    word-break: break-all;
+    margin-top: 10px;
+}
+.projects h4{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(33, 33, 61);
+}
+/*Links to pages customised, default color and underline removed*/
+.projects a{
+    text-decoration: none;
+    color: rgb(90, 90, 97);
+    padding: 20px;
+    font-size: 18px;
+    
+}
+.links{
+    margin-top: 40px;
+    padding-left: 50px;
+}
+/*Pictures images size adjusted*/
+.pics{
+    width: 830px;
+    height: 420px;
+    margin-top: 25px;
+    padding-left: 70px;
+}
+.work h1{
+    font-size: 30px;
+}
+.work-group {
+    margin: 20px 0;
+}
+
+/*Space created between About subheading and the page header*/
+.right-area h1 span {
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+.work .work-group {
+    position: relative;
+}
+
+.work-group h3 {
+    font-size: 22px;
+    font-weight: normal;
+    padding-left: 70px;
+}
+
+/*The h4 heading for work periods moved to the left so that it aligns with the rest of the page contents, font size adjusted*/
+.work-group h4 {
+    font-size: 18px;
+    padding-left: 70px;
+    font-weight: normal;
+    color: rgb(90, 90, 97);
+}
+
+/*Work period customized*/
+.work-group span {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+/*Created space between the Education subheading and the about me paragraph*/
+.education {
+    margin-top: 30x;
+}
+
+.edu-group {
+    position: relative;
+    margin: 10px 0;
+}
+
+/*The h4 heading for work positions held moved to the left so that it aligns with the rest of the page contents, font size adjusted*/
+.edu-group h4 {
+    padding-left: 80px;
+    font-size: 18px;
+    font-weight: normal;
+
+}
+
+/*Education periods layout aligned with the rest of the page contents*/
+.edu-group span {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.edu-group p {
+    padding-left: 80px;
+    color: rgb(90, 90, 97);
+}
+
+/*Button position set to be in line with other page contents, font size increased and given a color as well as rounded edges*/
+button {
+    font-size: 25px;
+    padding: 10px 20px;
+    margin: 50px 0 50px 150px;
+    background-color: rgb(33, 33, 61);
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(90, 90, 97);
+    cursor: pointer;
+    transition: 5s;
+}
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: black;
+    margin-top: 150px;
+    
+
+}
+.footer {
+    color: whitesmoke;
+
+}
+
+/*When hovered button background color changes and box given a shadow*/
+button:hover {
+    background-color: rgb(97, 41, 69);
+    box-shadow: 0 0 30px rgb(90, 90, 97);
+}
+
+/*Sources used in executing this task include You Tube, previous tasks, morzilla.org, Hyperiondev notes  */
